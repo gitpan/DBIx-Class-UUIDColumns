@@ -1,0 +1,24 @@
+Build.PL
+Changes
+lib/DBIx/Class/UUIDColumns.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/APR/UUID.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/Data/Uniqid.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/Data/UUID.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/UUID.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32/Guidgen.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32API/GUID.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.yml
+README
+t/02pod.t
+t/03podcoverage.t
+t/04basic.t
+t/05uuid.t
+t/lib/CustomUUIDMaker.pm
+t/lib/UUIDTest.pm
+t/lib/UUIDTest/Schema.pm
+t/lib/UUIDTest/Schema/Test.pm
+t/lib/UUIDTest/Setup.pm
