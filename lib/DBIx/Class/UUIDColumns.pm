@@ -14,7 +14,7 @@ __PACKAGE__->uuid_class( __PACKAGE__->_find_uuid_module );
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
 
-$VERSION = '0.01000';
+$VERSION = '0.01001';
 
 sub uuid_columns {
     my $self = shift;
@@ -58,6 +58,8 @@ sub get_uuid {
 sub _find_uuid_module {
     if (eval{require Data::UUID}) {
         return '::Data::UUID';
+    } elsif (eval{require Data::GUID}) {
+        return '::Data::GUID';
     } elsif ($^O ne 'openbsd' && eval{require APR::UUID}) {
         # APR::UUID on openbsd causes some as yet unfound nastiness for XS
         return '::APR::UUID';
@@ -72,7 +74,7 @@ sub _find_uuid_module {
     } elsif (eval{require Win32API::GUID}) {
         return '::Win32API::GUID';
     } else {
-        shift->throw_exception('no suitable uuid module could be found')
+        die 'no suitable uuid module could be found for use with DBIx::Class::UUIDColumns';
     };
 };
 
@@ -144,8 +146,8 @@ that matches one of the available L<DBIx::Class::UUIDColumns::UUIDMaker> subclas
   __PACKAGE__->uuid_class('::Data::UUID');
   # loads DBIx::Class::UUIDMaker::Data::UUID;
 
-Note that C<uuid_class> chacks to see that the specified class isa
-L<DBIx::Class::UUIDColumns::UUIDMaker> subbclass and throws and exception if it isn't.
+Note that C<uuid_class> checks to see that the specified class isa
+L<DBIx::Class::UUIDColumns::UUIDMaker> subclass and throws and exception if it isn't.
 
 =head2 uuid_maker
 

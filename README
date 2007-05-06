@@ -56,9 +56,9 @@ METHODS
       __PACKAGE__->uuid_class('::Data::UUID');
       # loads DBIx::Class::UUIDMaker::Data::UUID;
 
-    Note that "uuid_class" chacks to see that the specified class isa
-    DBIx::Class::UUIDColumns::UUIDMaker subbclass and throws and exception
-    if it isn't.
+    Note that "uuid_class" checks to see that the specified class isa
+    DBIx::Class::UUIDColumns::UUIDMaker subclass and throws and exception if
+    it isn't.
 
   uuid_maker
     Returns the current UUIDMaker instance for the given module.
