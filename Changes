@@ -1,5 +1,11 @@
 Revision history for DBIx::Class::UUIDColumns
 
+0.02000 Sun June 24 21:09:35 2007
+    - Converted to Class::Accessor::Grouped after mk_classdata
+        snafu in DBIC 0.08
+    - uuid_columns now also returns the list of columns
+    - insert now uses uuid_columns instead of internal list
+
 0.01001 Sat May 05 20:01:13 2007
     - RT#22364 (ASH) hopefully fixed with updated prereq
     - Added Data::GUID support

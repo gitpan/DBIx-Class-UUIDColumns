@@ -40,7 +40,7 @@ METHODS
     Inserts a new uuid string into each column in "uuid_columns".
 
   uuid_columns
-    Takes a list of columns to be filled with uuids during insert.
+    Gets/sets the list of columns to be filled with uuids during insert.
 
       __PACKAGE__->uuid_columns('artist_id');
 

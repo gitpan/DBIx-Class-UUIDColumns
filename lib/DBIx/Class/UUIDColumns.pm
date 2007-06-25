@@ -1,27 +1,32 @@
 package DBIx::Class::UUIDColumns;
-
 use strict;
 use warnings;
-
 use vars qw($VERSION);
-use base qw/DBIx::Class/;
 
-__PACKAGE__->mk_classdata( 'uuid_auto_columns' => [] );
-__PACKAGE__->mk_classdata( 'uuid_maker' );
-__PACKAGE__->uuid_class( __PACKAGE__->_find_uuid_module );
+BEGIN {
+    use base qw/DBIx::Class Class::Data::Accessor/;
+
+    __PACKAGE__->mk_group_accessors('inherited', qw/uuid_auto_columns uuid_maker/);
+};
+__PACKAGE__->uuid_class(__PACKAGE__->_find_uuid_module);
 
 # Always remember to do all digits for the version even if they're 0
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
 
-$VERSION = '0.01001';
+$VERSION = '0.02000';
 
 sub uuid_columns {
     my $self = shift;
-    for (@_) {
-        $self->throw_exception("column $_ doesn't exist") unless $self->has_column($_);
-    }
-    $self->uuid_auto_columns(\@_);
+
+    if (scalar @_) {
+        for (@_) {
+            $self->throw_exception("column $_ doesn't exist") unless $self->has_column($_);
+        }
+        $self->uuid_auto_columns(\@_);
+    };
+
+    return $self->uuid_auto_columns || [];
 }
 
 sub uuid_class {
@@ -44,7 +49,7 @@ sub uuid_class {
 
 sub insert {
     my $self = shift;
-    for my $column (@{$self->uuid_auto_columns}) {
+    for my $column (@{$self->uuid_columns}) {
         $self->store_column( $column, $self->get_uuid )
             unless defined $self->get_column( $column );
     }
@@ -130,7 +135,7 @@ Inserts a new uuid string into each column in L</uuid_columns>.
 
 =head2 uuid_columns
 
-Takes a list of columns to be filled with uuids during insert.
+Gets/sets the list of columns to be filled with uuids during insert.
 
   __PACKAGE__->uuid_columns('artist_id');
 
