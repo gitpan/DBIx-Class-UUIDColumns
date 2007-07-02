@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: style_no_tabs.t 3246 2007-05-06 00:59:25Z claco $
+# $Id: /local/DBIx-Class-UUIDColumns/t/style_no_tabs.t 1630 2007-05-06T00:59:25.373485Z claco  $
 use strict;
 use warnings;
 

@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: strict.t 3246 2007-05-06 00:59:25Z claco $
+# $Id: /local/DBIx-Class-UUIDColumns/t/strict.t 1630 2007-05-06T00:59:25.373485Z claco  $
 use strict;
 use warnings;
 

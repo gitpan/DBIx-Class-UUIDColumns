@@ -4,7 +4,7 @@ use warnings;
 use vars qw($VERSION);
 
 BEGIN {
-    use base qw/DBIx::Class Class::Data::Accessor/;
+    use base qw/DBIx::Class Class::Accessor::Grouped/;
 
     __PACKAGE__->mk_group_accessors('inherited', qw/uuid_auto_columns uuid_maker/);
 };
@@ -14,7 +14,7 @@ __PACKAGE__->uuid_class(__PACKAGE__->_find_uuid_module);
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
 
-$VERSION = '0.02000';
+$VERSION = '0.02001';
 
 sub uuid_columns {
     my $self = shift;

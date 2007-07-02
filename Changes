@@ -1,5 +1,10 @@
 Revision history for DBIx::Class::UUIDColumns
 
+0.02001 Sun July 1 20:15:33 2007
+    - Use Class::Accessor::Grouped instead of Class::Data::Accesor
+        because I'm a damn idiot.
+    - Fixed spelling test
+
 0.02000 Sun June 24 21:09:35 2007
     - Converted to Class::Accessor::Grouped after mk_classdata
         snafu in DBIC 0.08
