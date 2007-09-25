@@ -22,7 +22,8 @@ recommends:
   Win32::Guidgen: 0
   Win32API::GUID: 0
 requires: 
+  Class::Accessor::Grouped: 0
   DBIx::Class: 0.07005
   perl: 5.8.1
 tests: t/*.t t/*/*.t
-version: 0.02001
+version: 0.02002

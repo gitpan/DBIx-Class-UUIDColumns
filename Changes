@@ -1,5 +1,8 @@
 Revision history for DBIx::Class::UUIDColumns
 
+0.02002 Mon Sep 24 23:14:45 2007
+    - Added Class::Accessor::Grouped to PREREQ. Duh.
+
 0.02001 Sun July 1 20:15:33 2007
     - Use Class::Accessor::Grouped instead of Class::Data::Accesor
         because I'm a damn idiot.

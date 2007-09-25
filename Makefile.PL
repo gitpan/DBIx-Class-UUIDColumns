@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1638 2007-07-02T00:29:20.881961Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 30 2007-09-25T03:31:38.834942Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -21,6 +21,7 @@ if (
     requires 'Data::UUID';
 };
 
+requires 'Class::Accessor::Grouped';
 build_requires 'DBD::SQLite'     => '1.11';
 
 recommends 'Data::UUID';
