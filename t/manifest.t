@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/DBIx-Class-UUIDColumns/t/manifest.t 20 2007-05-06T00:59:25.373485Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/t/manifest.t 1345 2008-03-08T00:53:10.538782Z claco  $
 use strict;
 use warnings;
 
@@ -17,6 +17,6 @@ BEGIN {
 
 ok_manifest({
     exclude => ['/t/var', '/cover_db'],
-    filter  => [qr/\.svn/, qr/cover/, qr/Build(.(PL|bat))?/, qr/_build/],
+    filter  => [qr/\.svn/, qr/cover/, qr/Build(.(PL|bat))?/, qr/_build/, qr/\.tmproj/],
     bool    => 'or'
 });

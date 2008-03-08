@@ -1,5 +1,8 @@
 Revision history for DBIx::Class::UUIDColumns
 
+0.02003 Fri MAr 7 19:52:56 2008
+    - Quick fix for CPANTS META/author
+
 0.02002 Mon Sep 24 23:14:45 2007
     - Added Class::Accessor::Grouped to PREREQ. Duh.
 

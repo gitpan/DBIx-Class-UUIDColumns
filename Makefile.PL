@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 30 2007-09-25T03:31:38.834942Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1345 2008-03-08T00:53:10.538782Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -34,10 +34,10 @@ recommends 'Win32API::GUID';
 tests "t/*.t t/*/*.t";
 clean_files "DBIx-Class-UUIDColumns-* t/var";
 
+eval {
+    system 'pod2text lib/DBIx/Class/UUIDColumns.pm > README';
+};
+
 auto_install;
 
-WriteMakefile(
-  dist => {
-    PREOP => 'pod2text lib/DBIx/Class/UUIDColumns.pm > README'
-  }
-);
+WriteMakefile;
