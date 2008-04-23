@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1345 2008-03-08T00:53:10.538782Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1536 2008-04-23T00:51:01.033096Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -31,7 +31,7 @@ recommends 'UUID';
 recommends 'Win32::Guidgen';
 recommends 'Win32API::GUID';
 
-tests "t/*.t t/*/*.t";
+tests 't/*.t';
 clean_files "DBIx-Class-UUIDColumns-* t/var";
 
 eval {

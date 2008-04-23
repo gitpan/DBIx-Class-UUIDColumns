@@ -14,7 +14,7 @@ __PACKAGE__->uuid_class(__PACKAGE__->_find_uuid_module);
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
 
-$VERSION = '0.02003';
+$VERSION = '0.02004';
 
 sub uuid_columns {
     my $self = shift;
