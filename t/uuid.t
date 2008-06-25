@@ -1,11 +1,11 @@
 #!perl -wT
-# $Id: /local/DBIx-Class-UUIDColumns/t/uuid.t 1336 2007-05-06T00:59:25.373485Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/t/uuid.t 1684 2008-06-23T03:11:52.651284Z claco  $
 use strict;
 use warnings;
 
 BEGIN {
     use lib 't/lib';
-    use DBIC::Test tests => 13;
+    use DBIC::Test tests => 14;
 };
 
 my $schema = DBIC::Test->init_schema;
@@ -83,6 +83,15 @@ SKIP: {
     Class::C3->reinitialize();
     $row = $schema->resultset('Test')->create({ });
     ok $row->id, 'got something from Data::Uniqid';
+};
+
+SKIP: {
+    skip 'UUID::Random not installed', 1 unless eval 'require UUID::Random';
+
+    DBIC::Test::Schema::Test->uuid_class('::UUID::Random');
+    Class::C3->reinitialize();
+    $row = $schema->resultset('Test')->create({ });
+    ok $row->id, 'got something from UUID::Random';
 };
 
 eval {

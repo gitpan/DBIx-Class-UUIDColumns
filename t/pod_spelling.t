@@ -1,5 +1,5 @@
 #!perl -w
-# $Id: /local/DBIx-Class-UUIDColumns/t/pod_spelling.t 1341 2007-07-02T00:57:22.905474Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/t/pod_spelling.t 1684 2008-06-23T03:11:52.651284Z claco  $
 use strict;
 use warnings;
 
@@ -20,6 +20,8 @@ add_stopwords(<DATA>);
 all_pod_files_spelling_ok();
 
 __DATA__
+Moritz
+Onken
 uuid
 uuids
 Chia

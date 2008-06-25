@@ -14,7 +14,7 @@ __PACKAGE__->uuid_class(__PACKAGE__->_find_uuid_module);
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
 
-$VERSION = '0.02004';
+$VERSION = '0.02005';
 
 sub uuid_columns {
     my $self = shift;
@@ -78,6 +78,8 @@ sub _find_uuid_module {
         return '::Win32::Guidgen';
     } elsif (eval{require Win32API::GUID}) {
         return '::Win32API::GUID';
+    } elsif (eval{require UUID::Random}) {
+        return '::UUID::Random';
     } else {
         die 'no suitable uuid module could be found for use with DBIx::Class::UUIDColumns';
     };

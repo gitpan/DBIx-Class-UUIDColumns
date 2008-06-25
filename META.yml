@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.44
 distribution_type: module
-generated_by: 'Module::Install version 0.72'
+generated_by: 'Module::Install version 0.75'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -22,11 +22,11 @@ recommends:
   Data::UUID: 0
   Data::Uniqid: 0
   UUID: 0
+  UUID::Random: 0
   Win32::Guidgen: 0
   Win32API::GUID: 0
 requires:
   Class::Accessor::Grouped: 0
   DBIx::Class: 0.07005
   perl: 5.8.1
-tests: t/*.t
-version: 0.02004
+version: 0.02005

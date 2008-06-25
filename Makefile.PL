@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1536 2008-04-23T00:51:01.033096Z claco  $
+# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1684 2008-06-23T03:11:52.651284Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -16,7 +16,8 @@ if (
     !eval 'require UUID' &&
     !eval 'require Win32::Guidgen' &&
     !eval 'require Win32API::GUID' &&
-    !eval 'require Data::Uniqid'
+    !eval 'require Data::Uniqid' &&
+    !eval 'require UUID::Random'
     ) {
     requires 'Data::UUID';
 };
@@ -30,6 +31,7 @@ recommends 'APR::UUID';
 recommends 'UUID';
 recommends 'Win32::Guidgen';
 recommends 'Win32API::GUID';
+recommends 'UUID::Random';
 
 tests 't/*.t';
 clean_files "DBIx-Class-UUIDColumns-* t/var";

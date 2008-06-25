@@ -14,6 +14,7 @@ lib/DBIx/Class/UUIDColumns/UUIDMaker/Data/GUID.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/Data/Uniqid.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/Data/UUID.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/UUID.pm
+lib/DBIx/Class/UUIDColumns/UUIDMaker/UUID/Random.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32/Guidgen.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32API/GUID.pm
 Makefile.PL
