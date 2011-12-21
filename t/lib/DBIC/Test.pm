@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-UUIDColumns/t/lib/DBIC/Test.pm 1536 2008-04-23T00:51:01.033096Z claco  $
+# $Id$
 package DBIC::Test;
 use strict;
 use warnings;

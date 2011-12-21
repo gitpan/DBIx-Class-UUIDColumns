@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/DBIx-Class-UUIDColumns/t/manifest.t 1345 2008-03-08T00:53:10.538782Z claco  $
+# $Id$
 use strict;
 use warnings;
 

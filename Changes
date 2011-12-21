@@ -1,5 +1,9 @@
 Revision history for DBIx::Class::UUIDColumns
 
+0.02006 Wed Dec 21 16:58:00 2011
+    - Repackaged with Module::Install 1.00
+    - Migrated repository from svn to git and added links to meta tags
+
 0.02005 Sun June 22 23:10:23 2008
     - Added support for UUID::Random - Moritz Onken
 

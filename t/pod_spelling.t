@@ -1,5 +1,5 @@
 #!perl -w
-# $Id: /local/DBIx-Class-UUIDColumns/t/pod_spelling.t 1684 2008-06-23T03:11:52.651284Z claco  $
+# $Id$
 use strict;
 use warnings;
 

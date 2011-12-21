@@ -1,12 +1,19 @@
-# $Id: /local/DBIx-Class-UUIDColumns/Makefile.PL 1684 2008-06-23T03:11:52.651284Z claco  $
+# $Id$
 use strict;
 use warnings;
-use inc::Module::Install 0.65;
+use inc::Module::Install 1.00;
 
 name 'DBIx-Class-UUIDColumns';
 license 'perl';
 perl_version '5.008001';
 all_from 'lib/DBIx/Class/UUIDColumns.pm';
+
+homepage  'http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=dbsrgits/DBIx-Class-UUIDColumns.git';
+resources 'IRC'         => 'irc://irc.perl.org/#dbix-class';
+resources 'license'     => 'http://dev.perl.org/licenses/';
+resources 'repository'  => 'git://git.shadowcat.co.uk/dbsrgits/DBIx-Class-UUIDColumns.git';
+resources 'MailingList' => 'http://lists.scsys.co.uk/cgi-bin/mailman/listinfo/dbix-class';
+resources 'bugtracker'  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=DBIx-Class-UUIDColumns';
 
 requires 'DBIx::Class' => '0.07005';
 

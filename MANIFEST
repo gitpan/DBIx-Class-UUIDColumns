@@ -19,7 +19,6 @@ lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32/Guidgen.pm
 lib/DBIx/Class/UUIDColumns/UUIDMaker/Win32API/GUID.pm
 Makefile.PL
 MANIFEST			This list of files
-MANIFEST.SKIP
 META.yml
 README
 t/basic.t
@@ -37,4 +36,3 @@ t/strict.t
 t/style_no_tabs.t
 t/uuid.t
 t/warnings.t
-TODO
